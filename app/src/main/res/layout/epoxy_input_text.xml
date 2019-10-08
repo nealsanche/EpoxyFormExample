@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="value"
+            type="CharSequence" />
+
+        <variable
+            name="hint"
+            type="String" />
+
+        <variable
+            name="textWatcher"
+            type="android.text.TextWatcher" />
+    </data>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@{hint}"
+        android:paddingTop="4dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+        app:helperTextEnabled="true"
+        app:errorEnabled="true"
+        app:helperText=" ">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            app:inputText="@{value}"
+            app:textWatcher="@{textWatcher}"/>
+    </com.google.android.material.textfield.TextInputLayout>
+</layout>
