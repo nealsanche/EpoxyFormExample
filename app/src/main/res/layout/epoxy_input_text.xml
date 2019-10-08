@@ -35,6 +35,9 @@
             android:layout_height="wrap_content"
             android:inputType="textNoSuggestions|textVisiblePassword"
             app:inputText="@{value}"
-            app:textWatcher="@{textWatcher}"/>
+            app:textWatcher="@{textWatcher}"
+            app:validateMinLength="@{4}"
+            app:validateMaxLength="@{10}"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 </layout>

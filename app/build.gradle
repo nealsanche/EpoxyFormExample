@@ -53,4 +53,7 @@ dependencies {
         exclude group: 'com.android.support'
     }
     kapt "com.airbnb.android:epoxy-processor:$epoxy_version"
+
+    // Validation
+    implementation "com.github.ilhasoft:data-binding-validator:2.0.0"
 }

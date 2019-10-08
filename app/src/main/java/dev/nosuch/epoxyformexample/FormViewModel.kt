@@ -8,9 +8,9 @@ class FormViewModel(
     initialState: FormState
 ) : BaseMvRxViewModel<FormState>(initialState, debugMode = BuildConfig.DEBUG) {
 
-    fun onText(text: CharSequence) {
+    fun onText(text: CharSequence, valid: Boolean) {
         setState {
-            copy(text = text)
+            copy(text = text.toString(), textValid = valid)
         }
     }
 
