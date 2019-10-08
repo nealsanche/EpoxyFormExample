@@ -37,7 +37,7 @@
             app:inputText="@{value}"
             app:textWatcher="@{textWatcher}"
             app:validateMinLength="@{4}"
-            app:validateMaxLength="@{10}"
+            app:validateMaxLength="@{30}"
             />
     </com.google.android.material.textfield.TextInputLayout>
 </layout>

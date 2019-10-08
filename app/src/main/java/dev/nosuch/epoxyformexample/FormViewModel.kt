@@ -14,6 +14,24 @@ class FormViewModel(
         }
     }
 
+    fun onUnvalidatedText(text: CharSequence) {
+        setState {
+            copy(unvalidatedText = text.toString())
+        }
+    }
+
+    fun onUnvalidated2Text(text: CharSequence) {
+        setState {
+            copy(unvalidatedText2 = text.toString())
+        }
+    }
+
+    fun onUnvalidated3Text(text: CharSequence) {
+        setState {
+            copy(unvalidatedText3 = text.toString())
+        }
+    }
+
     companion object : MvRxViewModelFactory<FormViewModel, FormState> {
         override fun create(viewModelContext: ViewModelContext, state: FormState): FormViewModel? =
             FormViewModel(
